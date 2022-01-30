@@ -1,6 +1,6 @@
-baseURL = "http://portalsindex.xyz/"
+baseURL = "https://portalsindex.xyz/"
 languageCode = "en-us"
-title = "Some Title"
+title = "Portals Index"
 theme = "minimal-bootstrap-hugo-theme"
 
 [taxonomies]
