@@ -1,4 +1,4 @@
-baseURL = "https://portalsindex.xyz/"
+baseURL = "http://portalsindex.xyz/"
 languageCode = "en-us"
 title = "Portals Index"
 theme = "minimal-bootstrap-hugo-theme"
