@@ -1,4 +1,4 @@
-baseURL = "https://crfdiab.github.io/"
+baseURL = "http://portalsindex.xyz/"
 languageCode = "en-us"
 title = "Some Title"
 theme = "minimal-bootstrap-hugo-theme"
