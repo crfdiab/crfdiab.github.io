@@ -1,39 +1,89 @@
 <!doctype html><html lang=en>
 <head>
 <meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<title>(Hu)go Template Primer | Portals Index | Movies</title>
+<meta http-equiv=x-ua-compatible content="IE=edge">
 <meta name=generator content="Hugo 0.92.1">
-<meta name=description content="Hugo Site">
-<link rel=apple-touch-icon sizes=180x180 href=http://portalsindex.xyz/apple-touch-icon.png>
-<link rel=icon type=image/png sizes=32x32 href=http://portalsindex.xyz/favicon-32x32.png>
-<link rel=icon type=image/png sizes=16x16 href=http://portalsindex.xyz/favicon-16x16.png>
-<link rel=manifest href=http://portalsindex.xyz/site.webmanifest>
-<link rel=mask-icon href=http://portalsindex.xyz/safari-pinned-tab.svg color=#5bbad5>
-<meta name=msapplication-TileColor content="#da532c">
-<meta name=theme-color content="#ffffff">
-<link rel=stylesheet href=http://portalsindex.xyz/css/bootstrap.min.css>
-<title>(Hu)go Template Primer | Portals Index</title>
-<style>body{min-width:300px}.custom-navbar{margin-bottom:1em;height:60px}.custom-navbar a{display:inline-block;padding:18px 0;margin-right:1em;font-weight:700}.custom-navbar a:hover,.custom-navbar a:focus{text-decoration:none}@media print{.custom-navbar{display:none}}article{padding-bottom:1em}img{max-width:100%}body{background-color:#fff}body{color:#212529}a{color:#007bff}a:hover,a:focus{color:#0056b3}.custom-navbar{background-color:#212529}.custom-navbar a{color:rgba(255,255,255,.75)}.custom-navbar a:hover,.custom-navbar a:focus{color:#fff}.container{max-width:800px}pre{display:block;padding:9.5px;word-break:break-all;word-wrap:break-word;background-color:#f5f5f5;border:1px solid #ccc;border-radius:4px}pre code{padding:0;font-size:inherit;color:inherit;white-space:pre-wrap;background-color:transparent;border:none;border-radius:0}code{padding:2px 4px;color:inherit;background-color:#f5f5f5;border:1px solid #ccc;border-radius:4px;font-size:.9em}blockquote,.blockquote{padding:10px 20px;margin:0 0 20px;font-size:1em;border-left:5px solid #6c757d}</style>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=keywords content="go,templates,hugo">
+<meta name=description content="Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. …">
+<link rel=stylesheet type=text/css media=screen href=/css/normalize.css>
+<link rel=stylesheet type=text/css media=screen href=/css/main.css>
+<link rel=stylesheet type=text/css media=screen href=/css/all.css><link rel=stylesheet href=/css/katex.css crossorigin=anonymous>
+<script defer src=/js/katex.js integrity=sha384-PFWG8XW41D5NzhNv5FegM1CUkw9nNLdWug8DuwnUoNEVop9n5frjcnbtsZtxTNjw crossorigin=anonymous></script>
+<script defer src=/js/auto-render.js integrity=sha384-EN2q+JG5/3Z8gD7hT5WZqq+W+9wQR4P3IezfuZmGG5RkNXaaaks85seDJO7WkZlY crossorigin=anonymous onload=renderMathInElement(document.body)></script>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}]})})</script>
+<meta property="og:title" content="(Hu)go Template Primer">
+<meta property="og:description" content="Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
+This document is a brief primer on using Go templates.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://portalsindex.xyz/posts/goisforlovers/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2014-04-02T00:00:00+00:00">
+<meta property="article:modified_time" content="2014-04-02T00:00:00+00:00">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="(Hu)go Template Primer">
+<meta name=twitter:description content="Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
+This document is a brief primer on using Go templates.">
+<meta itemprop=name content="(Hu)go Template Primer">
+<meta itemprop=description content="Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
+This document is a brief primer on using Go templates."><meta itemprop=datePublished content="2014-04-02T00:00:00+00:00">
+<meta itemprop=dateModified content="2014-04-02T00:00:00+00:00">
+<meta itemprop=wordCount content="1480">
+<meta itemprop=keywords content="go,templates,hugo,">
 </head>
 <body>
-<nav class=custom-navbar>
-<div class=container>
-<a href=/>Posts</a>
-<a href=/tags/>Tags</a>
-<a href=/about/>About</a>
-<a href=/index.xml>RSS</a>
+<header>
+<div id=avatar>
+<a href=https://portalsindex.xyz/><img src=/img/logo.jpg alt="Portals Index | Movies"></a>
 </div>
+<div id=titletext>
+<h2 id=title><a href=https://portalsindex.xyz/>Portals Index | Movies</a></h2>
+</div>
+<div id=title-description>
+<p id=subtitle>Movies Summaries, Cast And Plots In One Box.</p>
+<div id=social>
+<nav><ul>
+<li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li>
+</ul></nav>
+</div>
+</div>
+<div id=mainmenu>
+<nav>
+<ul>
+<li><a href=/>Home</a></li>
+<li><a href=/post>All Posts</a></li>
+<li><a href=/about>About</a></li>
+<li><a href=/tags>Tags</a></li>
+</ul>
 </nav>
-<div class=container>
+</div>
+</header>
+<main>
+<div class=post>
 <article>
-<h1>(Hu)go Template Primer</h1>
-<p>Hugo uses the excellent <a href=https://golang.org/>Go</a> <a href=https://golang.org/pkg/html/template/>html/template</a> library for
+<div class=post-header>
+<div class=meta>
+<div class=date>
+<span class=day>02</span>
+<span class=rest>Apr 2014</span>
+</div>
+</div>
+<div class=matter>
+<h1 class=title>(Hu)go Template Primer</h1>
+<p class=post-meta>
+<span class=post-meta>
+</span>
+</p>
+</div>
+</div>
+<div class=markdown>
+<p>Hugo uses the excellent <a href=https://golang.org/ target=_blank>Go</a> <a href=https://golang.org/pkg/html/template/ target=_blank>html/template</a> library for
 its template engine. It is an extremely lightweight engine that provides a very
 small amount of logic. In our experience that it is just the right amount of
 logic to be able to create a good static website. If you have used other
 template systems from different languages or frameworks you will find a lot of
 similarities in Go templates.</p>
-<p>This document is a brief primer on using Go templates. The <a href=https://golang.org/pkg/html/template/>Go docs</a>
+<p>This document is a brief primer on using Go templates. The <a href=https://golang.org/pkg/html/template/ target=_blank>Go docs</a>
 provide more details.</p>
 <h2 id=introduction-to-go-templates>Introduction to Go Templates</h2>
 <p>Go templates provide an extremely simple template language. It adheres to the
@@ -41,7 +91,7 @@ belief that only the most basic of logic belongs in the template or view layer.
 One consequence of this simplicity is that Go templates parse very quickly.</p>
 <p>A unique characteristic of Go templates is they are content aware. Variables and
 content will be sanitized depending on the context of where they are used. More
-details can be found in the <a href=https://golang.org/pkg/html/template/>Go docs</a>.</p>
+details can be found in the <a href=https://golang.org/pkg/html/template/ target=_blank>Go docs</a>.</p>
 <h2 id=basic-syntax>Basic Syntax</h2>
 <p>Golang templates are HTML files with the addition of variables and
 functions.</p>
@@ -212,16 +262,16 @@ benefit from having the table of contents provided. Sometimes the TOC just
 doesn&rsquo;t make a lot of sense. We&rsquo;ve defined a variable in our front matter
 of some pages to turn off the TOC from being displayed.</p>
 <p>Here is the example front matter:</p>
-<pre tabindex=0><code>---
-title: &quot;Permalinks&quot;
-date: &quot;2013-11-18&quot;
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>---
+title: &#34;Permalinks&#34;
+date: &#34;2013-11-18&#34;
 aliases:
-  - &quot;/doc/permalinks/&quot;
-groups: [&quot;extras&quot;]
+  - &#34;/doc/permalinks/&#34;
+groups: [&#34;extras&#34;]
 groups_weight: 30
 notoc: true
 ---
-</code></pre><p>Here is the corresponding code inside of the template:</p>
+</code></pre></div><p>Here is the corresponding code inside of the template:</p>
 <pre><code>  {{ if not .Params.notoc }}
     &lt;div id=&quot;toc&quot; class=&quot;well col-md-4 col-sm-6&quot;&gt;
     {{ .TableOfContents }}
@@ -232,41 +282,56 @@ notoc: true
 <p>In your top-level configuration file (eg, <code>config.yaml</code>) you can define site
 parameters, which are values which will be available to you in chrome.</p>
 <p>For instance, you might declare:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#f92672>params</span>:
-  <span style=color:#f92672>CopyrightHTML</span>: <span style=color:#e6db74>&#34;Copyright &amp;#xA9; 2013 John Doe. All Rights Reserved.&#34;</span>
-  <span style=color:#f92672>TwitterUser</span>: <span style=color:#e6db74>&#34;spf13&#34;</span>
-  <span style=color:#f92672>SidebarRecentLimit</span>: <span style=color:#ae81ff>5</span>
-</code></pre></div><p>Within a footer layout, you might then declare a <code>&lt;footer></code> which is only
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#070>params</span>:<span style=color:#bbb>
+</span><span style=color:#bbb>  </span><span style=color:#070>CopyrightHTML</span>:<span style=color:#bbb> </span><span style=background-color:#fff0f0>&#34;Copyright &amp;#xA9; 2013 John Doe. All Rights Reserved.&#34;</span><span style=color:#bbb>
+</span><span style=color:#bbb>  </span><span style=color:#070>TwitterUser</span>:<span style=color:#bbb> </span><span style=background-color:#fff0f0>&#34;spf13&#34;</span><span style=color:#bbb>
+</span><span style=color:#bbb>  </span><span style=color:#070>SidebarRecentLimit</span>:<span style=color:#bbb> </span><span style=color:#60e;font-weight:700>5</span><span style=color:#bbb>
+</span></code></pre></div><p>Within a footer layout, you might then declare a <code>&lt;footer></code> which is only
 provided if the <code>CopyrightHTML</code> parameter is provided, and if it is given,
 you would declare it to be HTML-safe, so that the HTML entity is not escaped
 again. This would let you easily update just your top-level config file each
 January 1st, instead of hunting through your templates.</p>
-<pre tabindex=0><code>{{if .Site.Params.CopyrightHTML}}&lt;footer&gt;
-&lt;div class=&quot;text-center&quot;&gt;{{.Site.Params.CopyrightHTML | safeHtml}}&lt;/div&gt;
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>{{if .Site.Params.CopyrightHTML}}&lt;footer&gt;
+&lt;div class=&#34;text-center&#34;&gt;{{.Site.Params.CopyrightHTML | safeHtml}}&lt;/div&gt;
 &lt;/footer&gt;{{end}}
-</code></pre><p>An alternative way of writing the &ldquo;if&rdquo; and then referencing the same value
+</code></pre></div><p>An alternative way of writing the &ldquo;if&rdquo; and then referencing the same value
 is to use &ldquo;with&rdquo; instead. With rebinds the context <code>.</code> within its scope,
 and skips the block if the variable is absent:</p>
-<pre tabindex=0><code>{{with .Site.Params.TwitterUser}}&lt;span class=&quot;twitter&quot;&gt;
-&lt;a href=&quot;https://twitter.com/{{.}}&quot; rel=&quot;author&quot;&gt;
-&lt;img src=&quot;/images/twitter.png&quot; width=&quot;48&quot; height=&quot;48&quot; title=&quot;Twitter: {{.}}&quot;
- alt=&quot;Twitter&quot;&gt;&lt;/a&gt;
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>{{with .Site.Params.TwitterUser}}&lt;span class=&#34;twitter&#34;&gt;
+&lt;a href=&#34;https://twitter.com/{{.}}&#34; rel=&#34;author&#34;&gt;
+&lt;img src=&#34;/images/twitter.png&#34; width=&#34;48&#34; height=&#34;48&#34; title=&#34;Twitter: {{.}}&#34;
+ alt=&#34;Twitter&#34;&gt;&lt;/a&gt;
 &lt;/span&gt;{{end}}
-</code></pre><p>Finally, if you want to pull &ldquo;magic constants&rdquo; out of your layouts, you can do
+</code></pre></div><p>Finally, if you want to pull &ldquo;magic constants&rdquo; out of your layouts, you can do
 so, such as in this example:</p>
-<pre tabindex=0><code>&lt;nav class=&quot;recent&quot;&gt;
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>&lt;nav class=&#34;recent&#34;&gt;
   &lt;h1&gt;Recent Posts&lt;/h1&gt;
   &lt;ul&gt;{{range first .Site.Params.SidebarRecentLimit .Site.Recent}}
-    &lt;li&gt;&lt;a href=&quot;{{.RelPermalink}}&quot;&gt;{{.Title}}&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;{{.RelPermalink}}&#34;&gt;{{.Title}}&lt;/a&gt;&lt;/li&gt;
   {{end}}&lt;/ul&gt;
 &lt;/nav&gt;
-</code></pre>
+</code></pre></div>
+</div>
+<div class=tags>
+<div class=taxosfloating_left>
+<p>Tags</p>
+</div>
+<div class=termsfloating_right>
+<p>
+<a href=/tags/go/>go</a>
+<a href=/tags/hugo/>hugo</a>
+<a href=/tags/templates/>templates</a>
+</p>
+</div>
+<div class=clearit></div>
+</div>
 </article>
 </div>
-<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-107705235-11','auto'),ga('send','pageview')</script>
+</main>
+<footer>
+©Copyright Reserved To Portals Index Movies
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-107705235-11','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
-<link rel=stylesheet type=text/css href=//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css>
-<script src=//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js></script>
-<script>window.addEventListener("load",function(){window.cookieconsent.initialise({palette:{popup:{background:"#216942",text:"#b2d192"},button:{background:"#afed71"}}})})</script>
+</footer><script src=/js/dark-mode.js></script>
 </body>
 </html>
