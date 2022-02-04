@@ -1,81 +1,142 @@
-baseURL = "http://portalsindex.xyz/"
+BaseURL = "https://portalsindex.xyz/"
 languageCode = "en-us"
-title = "Portals Index"
-theme = "minimal-bootstrap-hugo-theme"
+defaultContentLanguage = "en"
+author = "Hugo Authors"
+title = "Portals Index | Movies"
+theme = "hugo-vitae"
+paginate = 5
+enableRobotsTXT = true
+
+copyright = "©Copyright Reserved To Portals Index Movies"
+
+pygmentsstyle = "colorful"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+googleAnalytics = "UA-107705235-11"
 
 [taxonomies]
   tag = "tags"
   category = "categories"
-
-[permalinks]
-  post = "/:filename/"
+  series = "series"
+  genre = "genre"
 
 [params]
-  description = "Hugo Site"
-  contentBackgroundColor = "#fff"
-  contentTextColor = "#212529"
-  contentLinkColor = "#007bff"
-  contentLinkHoverColor = "#0056b3"
-  navbarBackgroundColor = "#212529"
-  navbarLinkColor = "rgba(255, 255, 255, 0.75)"
-  navbarLinkHoverColor = "rgba(255, 255, 255, 1)"
-  wrapperMaxWidth = "800px"
-  customDateFormat = "Jan 2, 2006"
-  customCodeStyle = true
-  customBlockquoteStyle = true
-  showPostSummary = false
-  googleAnalytics = "UA-107705235-11"
-  cookieConsent = true
-  includeBootstrapJs = false
-  faviconSafariPinnedTabColor = "#5bbad5"
-  faviconMsApplicationTileColor = "#da532c"
-  faviconThemeColor = "#ffffff"
+  # Enable dark mode as default
+  #darkmode = true
 
-[menu]
-  [[menu.nav]]
-  name = "Posts"
-  url = "/"
-  weight = 1
-  [[menu.nav]]
-  name = "Tags"
-  url = "/tags/"
-  weight = 2
-  [[menu.nav]]
-  name = "About"
-  url = "/about/"
-  weight = 3
-  [[menu.nav]]
-  name = "RSS"
-  url = "/index.xml"
-  weight = 4
+  # Use homepage.md instead of a list of posts
+  homepage = false
 
-[markup]
-  defaultMarkdownHandler = "goldmark"
-  [markup.goldmark]
-    [markup.goldmark.extensions]
-      definitionList = true
-      footnote = true
-      linkify = true
-      strikethrough = true
-      table = true
-      taskList = true
-      typographer = true
-    [markup.goldmark.parser]
-      attribute = true
-      autoHeadingID = true
-    [markup.goldmark.renderer]
-      hardWraps = false
-      unsafe = true
-      xHTML = false
-  [markup.highlight]
-    codeFences = true
-    hl_Lines = ""
-    lineNoStart = 1
-    lineNos = false
-    lineNumbersInTable = true
-    noClasses = true
-    style = "monokai"
-    tabWidth = 4
-  [markup.tableOfContents]
-    endLevel = 6
-    startLevel = 2
+  # Add meta keywords in head part (Site Keywords or Tags of Page)
+  keywords = ["hugo","vitae","theme","static"]
+
+  # Add meta description in head part
+  description = "Big Index of movies and Their Cast, Summary and Plot"
+
+  # Add pagetitle to homepage <title> tag
+  pagetitle = ""
+
+  # Add a subtitle to your website
+  subtitle = "Movies Summaries, Cast And Plots In One Box."
+
+  # Add math typesetting with KaTeX (Global with this Param)
+  math = true
+
+  # Optional 80x80 avatar image.
+  avatar = "/img/logo.jpg"
+
+  # Optional favicons for website
+  #favicon = true
+
+  # Add list of sections that should show up on the homepage
+  mainSections = ["post"]
+
+  # Add list of Sections/Types that should no be considered by RSS
+  #nofeedSections = ["post"]
+
+  # Deactivate Taxonomies for specific page types
+  #disableTaxoTypes = [""]
+
+  # Custom CSS applied to default styles. (Path could be "static/css/")
+  #customcss = "css/custom.css"
+
+  # Show reading time on a post
+  readingTime = false
+
+  # Show word count on a post
+  wordCount = false
+
+  # Show author on a post (groups with readingTime and wordCount)
+  hideAuthor = true
+
+# Custom JavaScript
+[params.customjs]
+# enable Javascript by setting to true
+enabled = false
+
+# add a filepath (could be "static/js/")
+#src = "js/main.js"
+
+# specifies which referrer information to send when fetching the script
+#referrerpolicy = "no-referrer"
+
+# specifies that the script should not be executed in browsers supporting ES2015 modules
+#nomodule = false
+
+# Allows a browser to check for integrity to ensure the code hasn't been manipulated
+#integrity= ""
+
+# execute the script when page has finished parsing (external only)
+#defer = true
+
+# sets the mode of the request to an http cors request
+#crossorigin=true
+
+# executes the script asynchronously (external only)
+#async = true
+
+# Comments
+[params.comments]
+# Enable Comments with "true"
+enabled = false
+
+# Comment provider:
+#   disqus (https://disqus.com)
+#   commento (https://commento.io)
+#engine = "disqus"
+
+# Content types to disable comments on.
+#disableOnTypes = ["page"]
+
+[params.comments.disqus]
+#shortname = "" # Paste the shortname from your Disqus dashboard.
+
+[params.comments.commento]
+#host = "" # Paste the domain of you commento.io system
+
+# Navigation
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "All Posts"
+url = "/post"
+weight = 2
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 3
+
+[[menu.main]]
+name = "Tags"
+url = "/tags"
+weight = 4
+
+#[[params.social]]
+#name = "Email"
+#icon = "fas fa-envelope"
+#cmd = "mailto:example@example.com"
